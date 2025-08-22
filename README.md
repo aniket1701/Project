@@ -82,27 +82,23 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ### 🔄 Jenkins Pipeline Integration
 
-#### 1) Configure Jenkins:
+#### 1) Configure Jenkins Pipeline
 
- -  Install Terraform and AWS plugins.
+- Create a new pipeline project in Jenkins.
 
-- Connect Jenkins to this GitHub repository.
+- Point it to your GitHub repository.
 
-#### 2) Create a Jenkins Pipeline:
+- Use the provided Jenkinsfile for pipeline definition.
 
-#### Add the following stages:
+#### 2) Trigger Deployment
 
-- Clone Repository – Pull Terraform code from GitHub
+ #### On every commit or manual trigger, Jenkins will:
 
-- Terraform Init – Initialize Terraform
+- Pull the latest code from GitHub
 
-- Terraform Plan – Preview infrastructure changes
+- Run terraform init, plan, and apply
 
-- Terraform Apply – Provision resources
-
-#### 3) Trigger Deployment:
-
-- On every Git push, Jenkins will trigger the pipeline to automatically apply infrastructure changes.
+- Provision AWS infrastructure automatically
 
 ### 📜 Outputs
 
