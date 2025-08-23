@@ -24,6 +24,7 @@ It ensures that infrastructure changes are consistent, repeatable, and deployed 
 - Shell Script – Automated software installation
 
 ## 📂 Project Structure
+## terraform-code-to-create-jenkins-server
 - backend.tf – Defines remote backend to store the Terraform state (terraform.tfstate).
 
 - jenkins-server-script.sh – Installs Jenkins, Git, Terraform, and Kubectl.
